@@ -21,7 +21,7 @@ export default defineConfig({
       failOnError: true,
     },
   },
-  // GitHub Pages serves static files and does not run the default Cloudflare
-  // server bundle.
-  nitro: { preset: "static" },
+  // Pages only serves static files. Skipping Nitro lets TanStack Start emit
+  // its prerendered files directly, avoiding Nitro's extra SSR build step.
+  nitro: false,
 });

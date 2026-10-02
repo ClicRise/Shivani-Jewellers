@@ -35,7 +35,7 @@ and user sites (`owner.github.io/`).
 
 The published address appears in the workflow run and in **Settings → Pages**.
 For a local production build, run `bun install --frozen-lockfile` and
-`bun run build`; the static site is written to `.output/public`.
+`bun run build`; the static site is written to `dist/client`.
 
 ## Built with
 
