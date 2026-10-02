@@ -4,9 +4,9 @@ import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Gem, MapPin, Messa
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
 import { DIRECTIONS, products, whatsappUrl } from "@/lib/jewellery";
-import hero from "@/assets/jewellery-3.png.asset.json";
-import editorial from "@/assets/jewellery-1.png.asset.json";
-import ring from "@/assets/jewellery-8.png.asset.json";
+import hero from "@/assets/3.png";
+import editorial from "@/assets/1.png";
+import ring from "@/assets/8.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -44,7 +44,7 @@ function Home() {
 
   return <main>
     <section className="relative min-h-[620px] overflow-hidden bg-deep md:min-h-[650px] lg:min-h-[700px]">
-      <img src={hero.url} alt="Shivani Jewellers temple peacock gold necklace and matching earrings" className="absolute inset-0 h-full w-full object-cover object-center md:object-[70%_44%]" />
+      <img src={hero} alt="Shivani Jewellers temple peacock gold necklace and matching earrings" className="absolute inset-0 h-full w-full object-cover object-center md:object-[70%_44%]" />
       <div className="hero-shade absolute inset-0" />
       <div className="relative mx-auto flex min-h-[620px] max-w-[1440px] items-end px-5 pb-20 pt-28 md:min-h-[650px] md:items-center md:px-10 md:pb-0 lg:min-h-[700px] lg:px-16">
         <div className="max-w-[670px] text-deep-foreground">
@@ -87,9 +87,9 @@ function Home() {
       </div>
     </section>
 
-    <section className="grid min-h-[560px] md:grid-cols-2"><div className="relative min-h-[420px] bg-secondary"><img src={editorial.url} alt="Intricate gold choker set from Shivani Jewellers" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[center_38%]" /></div><div className="flex flex-col justify-center bg-deep px-7 py-20 text-deep-foreground md:px-12 lg:px-24"><span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Since 1996 · Meerut</span><h2 className="mt-6 max-w-lg font-display text-5xl leading-[1.05] md:text-6xl">Every piece tells <span className="italic">a story.</span></h2><p className="mt-6 max-w-md text-sm leading-8 text-deep-foreground/75">At Shivani Jewellers, we believe the pieces you choose become part of the moments you remember. Discover jewellery made to celebrate them all.</p><Button variant="luxuryOutline" asChild className="mt-9 self-start border-gold text-gold hover:bg-gold hover:text-deep"><Link to="/visit">Visit Our Store <ArrowUpRight size={16} /></Link></Button></div></section>
+    <section className="grid min-h-[560px] md:grid-cols-2"><div className="relative min-h-[420px] bg-secondary"><img src={editorial} alt="Intricate gold choker set from Shivani Jewellers" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[center_38%]" /></div><div className="flex flex-col justify-center bg-deep px-7 py-20 text-deep-foreground md:px-12 lg:px-24"><span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Since 1996 · Meerut</span><h2 className="mt-6 max-w-lg font-display text-5xl leading-[1.05] md:text-6xl">Every piece tells <span className="italic">a story.</span></h2><p className="mt-6 max-w-md text-sm leading-8 text-deep-foreground/75">At Shivani Jewellers, we believe the pieces you choose become part of the moments you remember. Discover jewellery made to celebrate them all.</p><Button variant="luxuryOutline" asChild className="mt-9 self-start border-gold text-gold hover:bg-gold hover:text-deep"><Link to="/visit">Visit Our Store <ArrowUpRight size={16} /></Link></Button></div></section>
 
-    <section className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:gap-20 md:px-10 md:py-28 lg:px-16"><div className="order-2 md:order-1"><p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">Made for your moments</p><h2 className="mt-5 max-w-md font-display text-5xl leading-[1.05] md:text-6xl">Find the one that <span className="italic">speaks to you.</span></h2><p className="mt-6 max-w-md text-sm leading-8 text-muted-foreground">A little sparkle can say so much. Explore our pieces, ask us anything, and find something worth holding onto.</p><Button variant="luxury" size="tall" asChild className="mt-8"><Link to="/collection">Browse all pieces <ArrowRight size={16} /></Link></Button></div><div className="order-1 aspect-[5/4] overflow-hidden bg-secondary md:order-2"><img src={ring.url} alt="Floral gold ring with green stone" loading="lazy" className="h-full w-full object-cover object-center" /></div></section>
+    <section className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:gap-20 md:px-10 md:py-28 lg:px-16"><div className="order-2 md:order-1"><p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">Made for your moments</p><h2 className="mt-5 max-w-md font-display text-5xl leading-[1.05] md:text-6xl">Find the one that <span className="italic">speaks to you.</span></h2><p className="mt-6 max-w-md text-sm leading-8 text-muted-foreground">A little sparkle can say so much. Explore our pieces, ask us anything, and find something worth holding onto.</p><Button variant="luxury" size="tall" asChild className="mt-8"><Link to="/collection">Browse all pieces <ArrowRight size={16} /></Link></Button></div><div className="order-1 aspect-[5/4] overflow-hidden bg-secondary md:order-2"><img src={ring} alt="Floral gold ring with green stone" loading="lazy" className="h-full w-full object-cover object-center" /></div></section>
 
     <section className="border-t border-border bg-secondary px-5 py-20 text-center md:py-24"><MapPin size={28} strokeWidth={1.2} className="mx-auto text-accent" /><p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">Come see us in Meerut</p><h2 className="mt-4 font-display text-5xl md:text-6xl">Even better in person.</h2><p className="mx-auto mt-5 max-w-md text-sm leading-7 text-muted-foreground">Visit us on Mansa Devi Road, Jagriti Vihar. Tuesday to Sunday, 10:00 AM – 8:00 PM.</p><Button variant="luxury" size="tall" asChild className="mt-8"><a href={DIRECTIONS} target="_blank" rel="noopener noreferrer">Get directions <ArrowUpRight size={16} /></a></Button></section>
   </main>;

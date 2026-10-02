@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import { Instagram, MapPin, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/shivani-logo.jpg.asset.json";
+import logo from "@/assets/shivani-logo.jpg";
 import { ADDRESS, DIRECTIONS, INSTAGRAM, PHONE, whatsappUrl } from "@/lib/jewellery";
 
 import appCss from "../styles.css?url";
@@ -131,7 +131,7 @@ function RootComponent() {
       <header className="relative z-50 border-b border-border bg-background">
         <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between gap-4 px-5 md:h-[92px] md:px-10 lg:px-16">
           <Link to="/" onClick={() => setMenuOpen(false)} aria-label="Shivani Jewellers home" className="flex shrink-0 items-center gap-3">
-            <img src={logo.url} alt="Shivani Jewellers logo" className="h-[56px] w-[56px] object-cover md:h-[68px] md:w-[68px]" />
+            <img src={logo} alt="Shivani Jewellers logo" className="h-[56px] w-[56px] object-cover md:h-[68px] md:w-[68px]" />
             <span className="flex flex-col"><span className="font-display text-[23px] font-semibold leading-none text-primary md:text-[29px]">Shivani</span><span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-accent md:text-[10px]">Jewellers</span></span>
           </Link>
           <nav className="hidden items-center gap-9 lg:flex" aria-label="Main navigation">
@@ -155,7 +155,7 @@ function RootComponent() {
       <Outlet />
       <footer className="bg-deep text-deep-foreground">
         <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-14 md:grid-cols-3 md:px-10 md:py-20 lg:px-16">
-          <div><img src={logo.url} alt="Shivani Jewellers" className="h-20 w-20 object-cover" /><p className="mt-5 max-w-xs font-display text-2xl leading-snug">Jewellery to cherish, memories to keep.</p><p className="mt-3 text-xs tracking-[0.15em] text-gold">EST. 1996 · MEERUT</p></div>
+          <div><img src={logo} alt="Shivani Jewellers" className="h-20 w-20 object-cover" /><p className="mt-5 max-w-xs font-display text-2xl leading-snug">Jewellery to cherish, memories to keep.</p><p className="mt-3 text-xs tracking-[0.15em] text-gold">EST. 1996 · MEERUT</p></div>
           <div><h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Explore</h2><div className="mt-6 flex flex-col items-start gap-4 text-sm"><Link to="/" className="hover:text-gold">Home</Link><Link to="/collection" className="hover:text-gold">The Collection</Link><Link to="/visit" className="hover:text-gold">Visit Us</Link><a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Instagram</a></div></div>
           <div><h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Get in touch</h2><div className="mt-6 flex flex-col items-start gap-4 text-sm leading-relaxed"><a href={`tel:+91${PHONE}`} className="flex items-center gap-3 hover:text-gold"><Phone size={16} /> +91 {PHONE}</a><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-gold"><MessageCircle size={16} /> Chat on WhatsApp</a><a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="flex max-w-xs items-start gap-3 hover:text-gold"><MapPin size={17} className="mt-1 shrink-0" /> {ADDRESS}</a><p className="text-deep-foreground/70">Tuesday – Sunday, 10:00 AM – 8:00 PM<br />Closed on Monday</p></div></div>
         </div>
