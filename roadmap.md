@@ -1,0 +1,4 @@
+- [x] Build a modern luxury jewellery website with supplied logo and photos.
+- [x] Add product-specific WhatsApp price enquiries and direct contact/location links.
+- [x] Include newly uploaded jewellery photos 9–11 in the collection.
+- [x] Verify desktop and mobile browsing and enquiries.
